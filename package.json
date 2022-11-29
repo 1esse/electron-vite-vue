@@ -13,14 +13,22 @@
   "main": "dist/main/main.cjs",
   "scripts": {
     "dev": "node scripts/bootstrap.dev.mjs",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "node scripts/build.pro.mjs",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
     "pathe": "^1.0.0",
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.3",
+    "@electron-forge/maker-deb": "^6.0.3",
+    "@electron-forge/maker-rpm": "^6.0.3",
+    "@electron-forge/maker-squirrel": "^6.0.3",
+    "@electron-forge/maker-zip": "^6.0.3",
     "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^3.2.0",
     "chalk": "^5.1.2",

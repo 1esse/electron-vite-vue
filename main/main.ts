@@ -15,7 +15,7 @@ const createWindow = () => {
     const rendererPort = process.argv[2]
     win.loadURL(`http://localhost:${rendererPort}`)
   } else {
-    win.loadFile(join(app.getAppPath(), 'renderer', 'index.html'))
+    win.loadFile(join(app.getAppPath(), 'dist', 'renderer', 'index.html'))
   }
 }
 
