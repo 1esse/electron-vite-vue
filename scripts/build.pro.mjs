@@ -20,5 +20,5 @@ Promise.allSettled([
   buildRenderer(),
   buildMain()
 ]).then(() => {
-  console.log(Chalk.greenBright('渲染进程及主进程代码打包完成，接下来请使用electron提供的打包器接管！'))
+  console.log(Chalk.greenBright('渲染进程及主进程代码打包完成，接下来由electron提供的打包器接管'))
 })

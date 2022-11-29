@@ -6,7 +6,7 @@
     "email": "572116385@qq.com"
   },
   "repository": {
-    "url": ""
+    "url": "https://github.com/1esse/electron-vite-vue"
   },
   "description": "electron + vite",
   "license": "MIT",
@@ -14,9 +14,9 @@
   "scripts": {
     "dev": "node scripts/bootstrap.dev.mjs",
     "build": "node scripts/build.pro.mjs",
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+    "start": "yarn build && electron-forge start",
+    "package": "yarn build && electron-forge package",
+    "make": "yarn build && electron-forge make"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
