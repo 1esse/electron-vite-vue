@@ -13,7 +13,7 @@
   "main": "dist/main/main.cjs",
   "scripts": {
     "dev": "node scripts/bootstrap.dev.mjs",
-    "build": "node scripts/build.pro.mjs",
+    "build": "node scripts/build.prod.mjs",
     "start": "yarn build && electron-forge start",
     "package": "yarn build && electron-forge package",
     "make": "yarn build && electron-forge make"
