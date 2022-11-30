@@ -31,11 +31,14 @@ async function startMainServer() {
     plugins: [
       {
         // 每次编写主进程模块都重新编译
-        writeBundle({ ...args }) {
+        writeBundle() {
           if (electronProcess) {
             electronProcess.removeListener('exit', stopServe)
             electronProcess.kill()
             electronProcess = null
+            console.log(Chalk.greenBright('主进程重启成功, 端口: ', rendererPort))
+          } else {
+            console.log(Chalk.greenBright('主进程启动成功, 端口: ', rendererPort))
           }
           electronProcess = spawn(
             electron, ['.', rendererPort],
@@ -46,7 +49,6 @@ async function startMainServer() {
       }
     ]
   })
-  console.log(Chalk.greenBright('主进程启动成功, 端口: ', rendererPort))
 }
 
 export function stopServe() {
