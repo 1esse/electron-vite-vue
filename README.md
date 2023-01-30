@@ -1,1 +1,5 @@
-# electron + vite + vue = awesome
+# 这里是集成vue框架的electron开箱即用
+
+## 特点
++ 渲染进程代码修改支持实时hmr热更新
++ 主进程代码修改支持自动重启看效果
